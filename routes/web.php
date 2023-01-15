@@ -7,7 +7,6 @@ use App\Http\Controllers\FormController;
 
 Route::get('/', [HomeController::class, 'index']);
 
-
 Route::resource('form', FormController::class);
 
 

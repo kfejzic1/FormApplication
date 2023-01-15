@@ -14,7 +14,8 @@ class FormController extends Controller
      */
     public function index()
     {
-        return view('forms.index');
+        $forms = Form::paginate();
+        return view('forms.index', compact('forms'));
     }
 
     /**

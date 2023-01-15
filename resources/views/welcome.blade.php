@@ -25,12 +25,10 @@
             
             @if (Route::has('login'))
             <header class="sticky top-0 z-50 mb-32">
-                <div class="hidden fixed top-0 left-0 px-6 py-4 sm:block">
-                    <a href="{{ url('form') }}" class="text-gray-700 dark:text-white dark:md:hover:text-gray-500">Forma</a>
-                </div>
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                        <a href="{{ route('form.index') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Forme</a>
+                        <a href="{{ url('/dashboard') }}" class="text-sm ml-4 text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                     @else
                         <a href="{{ route('login') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
